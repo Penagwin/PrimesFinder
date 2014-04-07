@@ -1,0 +1,53 @@
+body {
+    background-color: #454545;
+    background-image: url('bg.jpg');
+}
+.main {}
+.text{
+    line-height: 20px;
+    vertical-align: middle;
+    margin-top: 30px;
+}
+.tile-yes {
+    align-self: center;
+    float: left;
+    width: 60px;
+    height: 80px;
+    margin: 5px;
+    color: white;
+    text-align: center;
+    background-color: #0054ff;
+    line-height: 20px;
+    vertical-align: middle;
+    letter-spacing: 0pt;
+    word-spacing: 2pt;
+    font-size: 25px;
+    font-family: arial, helvetica, sans-serif;
+    line-height: 1;
+}
+.tile-no {
+    align-self: center;
+    float: left;
+    width: 60px;
+    height: 80px;
+    margin: 5px;
+    color: white;
+    text-align: center;
+    background-color: #6dff00;
+    letter-spacing: 0pt;
+    word-spacing: 2pt;
+    font-size: 25px;
+    font-family: arial, helvetica, sans-serif;
+    line-height: 1;
+
+}
+.hide {
+    align-self: center;
+    float: left;
+    width: 60px;
+    height: 80px;
+    margin: 10px;
+    color: white;
+    text-align: center;
+    background-color: #454545;
+}
