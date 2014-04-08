@@ -2,14 +2,46 @@ body {
     background-color: #454545;
     background-image: url('bg.jpg');
     color: white;
+    letter-spacing: 0pt;
+    word-spacing: 2pt;
+    font-size: 25px;
+    font-family: arial, helvetica, sans-serif;
+    line-height: 1;
 }
-header{
-background-color: blue;
+.main {
+    z-index: -1;
 }
-h2{
-text-align: center;
+header {
+    background-color: #ADADAD;
+    overflow: hidden;
+    left: 0px;
+    top: 0px;
+    z-index: 3;
 }
-.text{
+
+header::before {
+    display: block;
+    position: absolute;
+    top: -200%;
+    left: -150%;
+    height: 500%;
+    width: 200%;
+    background: #f39c12;
+    content: '';
+    z-index: -1;
+    -moz-transform-origin: 100% 50%;
+    -o-transform-origin: 100% 50%;
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+h2 {
+    text-align: center;
+}
+.text {
     line-height: 20px;
     vertical-align: middle;
     margin-top: 30px;
@@ -25,11 +57,6 @@ text-align: center;
     background-color: #0054ff;
     line-height: 20px;
     vertical-align: middle;
-    letter-spacing: 0pt;
-    word-spacing: 2pt;
-    font-size: 25px;
-    font-family: arial, helvetica, sans-serif;
-    line-height: 1;
 }
 .tile-no {
     align-self: center;
@@ -40,12 +67,6 @@ text-align: center;
     color: white;
     text-align: center;
     background-color: #6dff00;
-    letter-spacing: 0pt;
-    word-spacing: 2pt;
-    font-size: 25px;
-    font-family: arial, helvetica, sans-serif;
-    line-height: 1;
-
 }
 .hide {
     align-self: center;

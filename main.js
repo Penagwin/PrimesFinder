@@ -15,12 +15,11 @@ function next() {
     }
 }
 
-function isVisible() {
+    var docsize = 0;
 
-}
 $(document).ready(function () {
-
     $(window).resize(function () {
+
 
         $('.main').css({
             position: 'absolute',
@@ -31,6 +30,13 @@ $(document).ready(function () {
 
             left: ($(window).width() - $('.main').outerWidth()) / 2,
             top: ($(window).height() - $('.main').outerHeight()) / 2 + 5
+
+        });
+
+        $('header').css({
+            position: 'absolute',
+            width:  '100%',
+            height: '100%'
         });
 
     });
@@ -39,7 +45,6 @@ $(document).ready(function () {
             elementOffset = $('.hide').offset().top,
             distance = (elementOffset - scrollTop);
         var windh = $(this).outerHeight();
-        console.info(distance - windh);
         possibleH = 300;
         if (distance - windh < 0) {
             for (var i = 0; i <= possibleH; i++) {
@@ -47,12 +52,25 @@ $(document).ready(function () {
 
             }
         }
+        if ($(window).scrollTop() <= $(window).height() + 60) {
+            $('.main').css({
+                top: ($(window).height() - $('.main').outerHeight()) / 2 + 5 + ($(window).scrollTop())
+            });
+        } else {
+            $('.main').css({
+                top: ($(window).height() - $('.main').outerHeight()) / 2 + 50 + $(window).height()
+            });
+        }
+
+
+
     });
 
 
 
 
     $(window).resize();
+    // $('header').foggy();
 
     possibleH = 300;
     for (var i = 0; i <= possibleH; i++) {
