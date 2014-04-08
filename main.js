@@ -1,12 +1,11 @@
 var cnumber = 1;
-
 var possibleH = 300;
 
 function next() {
-    var oldcnumber = cnumber;
-    var increment = 2;
+    var oldcnumber = cnumber,
+        increment = 2;
     cnumber++;
-    while (((oldcnumber % increment) != 0) && oldcnumber > increment ) {
+    while (((oldcnumber % increment) != 0) && oldcnumber > increment) {
         increment++;
     }
     if (!(oldcnumber > increment)) {
@@ -20,6 +19,7 @@ function isVisible() {
 
 }
 $(document).ready(function () {
+
     $(window).resize(function () {
 
         $('.main').css({

@@ -1,8 +1,14 @@
 body {
     background-color: #454545;
     background-image: url('bg.jpg');
+    color: white;
 }
-.main {}
+header{
+background-color: blue;
+}
+h2{
+text-align: center;
+}
 .text{
     line-height: 20px;
     vertical-align: middle;
