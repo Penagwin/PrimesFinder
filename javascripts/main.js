@@ -45,6 +45,11 @@ $(document).ready(function () {
             top: ($(window).height() - $('.main').outerHeight()) / 2
 
         });
+        $('.arrow-down').css({
+
+            left: ($(window).width() - $('.arrow-down').outerWidth()) / 2,
+
+        });
 
         $('header').css({
             position: 'absolute',
