@@ -2,7 +2,8 @@ var cnumber = 1,
     possibleH = 300,
     offset = 0,
     pastmag = 0,
-    pastsize = 1;
+    pastsize = 1,
+    runfirst = true;
 String.prototype.visualLength = function () {
     var ruler = document.getElementById("ruler");
     ruler.innerHTML = this;
@@ -57,19 +58,20 @@ $(document).ready(function () {
             distance = (offset - scrollTop);
         var windh = $(this).outerHeight();
         possibleH = 300;
-        if (distance - windh < 0) {
+        if (distance - windh < 0 || runfirst == true) {
             for (var i = 0; i <= possibleH; i++) {
                 if (cnumber.toString().length > pastmag) {
                     console.log(cnumber.toString().visualLength());
                     pastmag = cnumber.toString().length;
-                    pastsize = Math.max(Math.min(cnumber.toString().visualLength() / 2.5));
+                    pastsize = 25-(cnumber.toString().visualLength() / (10.25));
                 }
                 objectt = $(next());
                 objectt.insertBefore('.hide');
-                objectt.css('font-size', pastsize, parseFloat(Number.POSITIVE_INFINITY), parseFloat(Number.NEGATIVE_INFINITY));
+                objectt.css('font-size', pastsize);
             }
 
             offset = $('.hide').offset().top;
+            runfirst = false;
 
         }
         if ($(window).scrollTop() <= $(window).height() + 60) {
@@ -90,9 +92,8 @@ $(document).ready(function () {
 
 
     $(window).resize();
+    $(window).scroll();
 
     possibleH = 300;
-    for (var i = 0; i <= possibleH; i++) {
-        $(next()).insertBefore('.hide');
-    }
+
 });
