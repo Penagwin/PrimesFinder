@@ -5,10 +5,10 @@
     font-weight: normal;
     font-style: normal;
 }
-.corner{
-position: absolute;
-right:0px;
-top:0px;
+.corner {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
 }
 body {
     background-color: #454545;
@@ -20,16 +20,20 @@ body {
     font-weight: 800;
     font-family: SECRCODE;
 }
+.down {
+    position: absolute;
+    font-size: 20px;
+    bottom: 40px;
+}
 .arrow-down {
     position: absolute;
     margin: auto;
     bottom: 20px;
-	width: 0;
-	height: 0;
-	border-left: 20px solid transparent;
-	border-right: 20px solid transparent;
-
-	border-top: 20px solid #ffffff;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #ffffff;
 }
 a:link {
     color: #ffffff;

@@ -50,6 +50,11 @@ $(document).ready(function () {
             left: ($(window).width() - $('.arrow-down').outerWidth()) / 2,
 
         });
+        $('.down').css({
+
+            left: ($(window).width() - $('.down').outerWidth()) / 2,
+
+        });
 
         $('header').css({
             position: 'absolute',
@@ -68,7 +73,7 @@ $(document).ready(function () {
                 if (cnumber.toString().length > pastmag) {
                     console.log(cnumber.toString().visualLength());
                     pastmag = cnumber.toString().length;
-                    pastsize = 25-(cnumber.toString().visualLength() / (10.25));
+                    pastsize = 25 - (cnumber.toString().visualLength() / (10.25));
                 }
                 objectt = $(next());
                 objectt.insertBefore('.hide');
@@ -95,7 +100,11 @@ $(document).ready(function () {
 
 
 
-
+    $('body').on({
+        'touchmove': function (e) {
+           $(window).scroll();
+        }
+    });
     $(window).resize();
     $(window).scroll();
 
